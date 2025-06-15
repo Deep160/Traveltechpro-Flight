@@ -1,0 +1,76 @@
+@import "../../../styles/config";
+
+.wrapper {
+  max-width: 300px;
+  @include devices(tabletLandscape) {
+    max-width: 100%;
+  }
+  :global(.react-datepicker-wrapper) {
+    @include devices(tabletLandscape) {
+      width: 100%;
+    }
+    :global(.react-datepicker__input-container) {
+      &:global(.react-datepicker__view-calendar-icon) {
+        :global(.react-datepicker__calendar-icon) {
+          padding: 8px 0;
+          width: 19px;
+          height: 19px;
+
+          @include devices(tabletLandscape) {
+            left: 15px;
+            padding: 12px 0;
+          }
+        }
+      }
+
+      :global(.react-datepicker__close-icon) {
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+
+        &::after {
+          background-color: transparent;
+          content: url(../../../public/images/cross.svg); // Or any icon/text
+          font-size: 14px;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+/* Input box */
+.customInput {
+  width: 100%;
+  padding: 8px 10px 8px 25px !important;
+  border: 0;
+  color: $font-color;
+  font-size: 16px;
+  font-weight: $f_medium;
+  line-height: normal;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $white;
+    @include devices(tabletLandscape) {
+      background-color: #f4f2f2;
+    }
+  }
+  @include devices(tabletLandscape) {
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    padding: 11px 15px 11px 47px !important;
+  }
+}
+
+/* Full calendar popup */
+.calendar {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}

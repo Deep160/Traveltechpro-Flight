@@ -1,0 +1,54 @@
+@import "../../../styles/config";
+
+.bookingAd {
+  border-radius: 18px;
+  background-color: $white;
+  border-radius: 25px;
+  overflow: hidden;
+  min-width: 226px;
+  position: relative;
+  padding: 8px;
+  box-shadow: 0px 24px 22px 0px rgba(0, 43, 102, 0.1);
+  video {
+    border-radius: 18px;
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    color: $white;
+    padding: 70px 12px 0 21px;
+
+    h2 {
+      font-family: Pacifico;
+      font-size: 20px;
+      font-weight: $f_normal;
+      line-height: 26px;
+    }
+
+    h3 {
+      font-family: "Secular One";
+      font-size: 20px;
+      font-weight: $f_normal;
+      line-height: 26px;
+    }
+
+    p {
+      font-size: 13px;
+      font-weight: $f_medium;
+      line-height: normal;
+      margin-block: 10px 15px;
+    }
+
+    .actionButton {
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(19.5px);
+      padding: 8px 18px;
+      color: $white;
+      text-align: center;
+      font-size: 13px;
+      font-weight: $f_semibold;
+      line-height: normal;
+    }
+  }
+}

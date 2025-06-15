@@ -1,0 +1,55 @@
+@import "../../../styles/config";
+
+.boxtype {
+  border-radius: 12px;
+  padding: 15px;
+  background-color: $light-gray;
+  @include devices(tabletLandscape) {
+    background-color: $white;
+    border-radius: 14px;
+    border: 1px solid #dfe4ea;
+  }
+  &.active {
+    background-color: $primary;
+    .content {
+      .title,
+      .desc {
+        color: $white;
+      }
+    }
+  }
+  .iconBox {
+    background-color: $gray;
+    border-radius: 12px;
+    display: flex;
+    min-width: 45px;
+    width: 45px;
+    margin-inline: auto;
+    height: 45px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    @include devices(tabletLandscape) {
+      background-color: $white;
+    }
+  }
+  .content {
+    text-align: center;
+    margin-top: 10px;
+    .title {
+      margin-bottom: 2px;
+      color: #4f4f4f;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .desc {
+      color: $sub-font-color;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+}

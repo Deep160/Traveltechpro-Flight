@@ -1,0 +1,200 @@
+@import "../../../styles/config";
+
+.searchWidgetWrapper {
+  box-shadow: 0px 15px 45px 0px rgba(0, 0, 0, 0.05);
+  :global(.navbar-toggler) {
+    width: 100%;
+    padding-block: 20px;
+    border: 0;
+    box-shadow: none !important;
+    .flightLocation {
+      color: $black;
+      font-size: 20px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      margin-bottom: 3px;
+      @include devices(mobile) {
+        font-size: 15px;
+      }
+    }
+    .flightDetails {
+      color: #9ca3af;
+      font-size: 14px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      @include devices(mobile) {
+        font-size: 10px;
+      }
+
+      > span {
+        position: relative;
+        &:not(:last-child) {
+          margin-right: 15px;
+          &::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            right: -10px;
+            background-color: #9ca3af;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+.searchOffcanvas {
+  height: 100% !important;
+
+  :global(.offcanvas-header) {
+    padding-block: 35px;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid $border-color;
+    :global(.offcanvas-title) {
+      color: $black;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      > span {
+        display: block;
+        color: #9ca3af;
+        text-align: center;
+        font-size: 14px;
+        font-weight: $f_medium;
+        line-height: normal;
+        margin-top: 3px;
+      }
+    }
+    :global(.btn-close) {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #dfe4ea;
+      border-radius: 50%;
+      background-size: 8px;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+    }
+  }
+
+  .tabWrapper {
+    border-bottom: 1px solid $border-color;
+    @include devices(tabletLandscape) {
+      border: 0;
+      margin-bottom: 25px;
+    }
+    .tabBtnWrapper {
+      display: flex;
+      align-items: center;
+      @include devices(tabletLandscape) {
+        border-radius: 5px;
+        border: 1px solid #dfe4ea;
+        background: #f9fafb;
+        padding: 5px;
+        gap: 8px;
+      }
+      > button {
+        padding: 16px 24px;
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: $f_normal;
+        &:active {
+          border-color: transparent;
+        }
+        &.active {
+          background-color: $primary;
+          color: $white;
+        }
+        @include devices(tabletLandscape) {
+          border-radius: 5px;
+          flex: 1;
+          padding: 13px;
+          font-size: 16px;
+          font-weight: $f_semibold;
+          color: $primary;
+          border: 2px solid $primary;
+        }
+      }
+    }
+  }
+
+  .searchBarWrapper {
+    border-bottom: 1px solid $border-color;
+    @include devices(tabletLandscape) {
+      border: 0;
+    }
+
+    :global(.fromGroup) {
+      padding: 20px 40px;
+      &:not(:last-child) {
+        border-right: 1px solid $border-color;
+      }
+      &:first-child {
+        padding-left: 0;
+        display: block;
+      }
+      &:last-child {
+        padding-right: 0;
+        text-align: end;
+      }
+      @media (max-width: 1900px) {
+        padding: 20px 25px;
+      }
+      @include devices(bigDesktop) {
+        padding: 15px;
+      }
+      @include devices(desktop) {
+        padding: 15px 20px;
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-bottom: 1px solid $border-color;
+        }
+        &:nth-child(3) {
+          border-right: 0;
+        }
+        &:nth-child(4) {
+          padding-left: 0 !important;
+        }
+      }
+      @include devices(tabletLandscape) {
+        padding: 15px 0 !important ;
+        border: 0 !important;
+        margin-block: 10px;
+        padding-block: 0 !important;
+      }
+
+      :global(.form-label) {
+        color: $sub-font-color;
+        font-size: 12px;
+        font-weight: $f_medium;
+        line-height: normal;
+        margin-bottom: 0;
+        @include devices(tabletLandscape) {
+          color: #111928;
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    :global(.search-btn) {
+      max-width: 175px;
+      width: 100%;
+      @include devices(desktop) {
+        padding: 12px 15px;
+        max-width: 100%;
+      }
+      @include devices(tabletLandscape) {
+        margin-block: 15px 10px;
+      }
+    }
+  }
+}

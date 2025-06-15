@@ -1,0 +1,50 @@
+@import "../../../styles/config";
+
+.accordionType1 {
+  :global(.accordion-item) {
+    border-radius: 10px;
+    border: 1px solid $border-color !important;
+    background: $white;
+    margin-bottom: 20px;
+    &:has(:global(.show)) {
+      border-color: #dfe4ea;
+    }
+    :global(.accordion-header) {
+      :global(.accordion-button) {
+        border-radius: 10px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 17px 20px;
+        color: $black;
+        font-size: 16px;
+        font-weight: $f_semibold;
+        line-height: normal;
+        box-shadow: none;
+        background-color: $white !important;
+        &::after {
+          display: none;
+        }
+        &:hover {
+          z-index:0;
+        }
+        :global(.arrow-icon) {
+          svg {
+            transition: 0.3s all ease-in-out;
+            rotate: 180deg;
+          }
+        }
+        &:global(.collapsed) {
+          :global(.arrow-icon) {
+            svg {
+              rotate: 0deg;
+            }
+          }
+        }
+      }
+    }
+    :global(.accordion-body) {
+      padding: 15px 20px 20px;
+    }
+  }
+}

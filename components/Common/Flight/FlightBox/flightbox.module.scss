@@ -1,0 +1,182 @@
+@import "../../../../styles/config";
+
+.flightBox {
+  padding: 24px 34px;
+  border-radius: 13px;
+  background-color: $white;
+  box-shadow: 0px 4px 20px 0px rgba(238, 238, 238, 0.5);
+  margin-block: 25px;
+  background-image: url(../../../../public/images/flight-blue-pattern.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  @include devices(mobile) {
+    padding: 25px 10px;
+    border-radius: 0;
+    background-image: url(../../../../public/images/flight-blue-pattern-mobile.svg);
+  }
+
+  &:global(.active) {
+    background-color: #154092;
+    .airlineInfo {
+      .airlineName {
+        color: $white;
+      }
+    }
+    .flightInfo {
+      .time,
+      .location {
+        color: $white;
+      }
+
+      .middle {
+        color: $white;
+        svg path {
+          stroke: $white;
+        }
+      }
+    }
+    .priceInfo {
+      .totalPrice,
+      .finalPrice {
+        color: $white;
+      }
+    }
+  }
+
+  .airlineInfo {
+    flex: 1.25;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @media (max-width: 1600px) {
+      gap: 15px;
+    }
+    @include devices(tabletLandscape) {
+      flex: auto;
+    }
+    .airlineLogo {
+      min-width: 72px;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+      background: $white;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      position: relative;
+      @include devices(mobile) {
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+    .airlineName {
+      color: $font-color;
+      font-size: 22px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      display: block;
+      @include devices(desktop) {
+        display: none;
+      }
+    }
+  }
+  .flightInfo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    @include devices(tabletLandscape) {
+      flex: auto;
+      gap: 15px;
+    }
+    .departure {
+      text-align: left;
+    }
+    .arrival {
+      text-align: right;
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $sub-font-color;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: normal;
+      :global(.arrow) {
+        :global(.desktop) {
+          @media (max-width: 1600px) {
+            width: 80%;
+            margin: auto;
+          }
+          @include devices(tabletLandscape) {
+            width: auto;
+          }
+        }
+      }
+      @include devices(mobile) {
+        font-size: 10px;
+      }
+    }
+    .time {
+      color: $font-color;
+      font-size: 18px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      display: block;
+      @include devices(mobile) {
+        font-size: 16px;
+      }
+    }
+    .location {
+      color: $sub-font-color;
+      font-size: 14px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      @include devices(mobile) {
+        font-size: 12px;
+      }
+    }
+  }
+  .priceInfo {
+    flex: 1;
+    text-align: end;
+    @include devices(tabletLandscape) {
+      flex: auto;
+    }
+    .totalPrice {
+      color: $sub-font-color;
+      text-align: right;
+      font-size: 14px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      text-decoration-line: line-through;
+      @include devices(mobile) {
+        font-size: 12px;
+      }
+    }
+    .finalPrice {
+      color: $font-color;
+      font-size: 22px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      display: block;
+      @include devices(mobile) {
+        font-size: 18px;
+      }
+    }
+  }
+}

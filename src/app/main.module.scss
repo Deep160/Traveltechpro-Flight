@@ -1,0 +1,104 @@
+@import "../../styles/config";
+
+.pageMain {
+  padding-block: 50px;
+  @include devices(tabletLandscape) {
+    padding-block: 0px;
+  }
+  .mainContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+  }
+  .shortcutBtnWrapper {
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    position: fixed;
+    bottom: 0;
+    z-index: 111;
+    background: $white;
+    width: 100%;
+    padding: 13px;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.25);
+    display: none;
+    @include devices(tabletLandscape) {
+      display: flex;
+    }
+    .shortcutBtn {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background-color: #dfe4ea;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #d5d9df;
+      }
+    }
+  }
+}
+
+.customCheck {
+  :global(.form-check-label) {
+    .title {
+      color: $black;
+      font-size: 14px;
+      font-weight: $f_semibold;
+      line-height: normal;
+      margin-bottom: 5px;
+      display: block;
+    }
+    .desc {
+      color: #9ca3af;
+      font-size: 12px;
+      font-weight: $f_semibold;
+      line-height: normal;
+    }
+  }
+}
+
+.airlinesOffcanvas,
+.filtersOffcanvas,
+.sortbyOffcanvas {
+  border-radius: 12px 12px 0 0;
+  &:global(.offcanvas) {
+    height: max-content;
+    max-height: 85%;
+    border: 0;
+
+    :global(.offcanvas-header) {
+      padding: 25px;
+      z-index: 1;
+      justify-content: center;
+      border-bottom: 1px solid $border-color;
+      :global(.offcanvas-title) {
+        color: $black;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: normal;
+      }
+      :global(.btn-close) {
+        position: absolute;
+        top: 32px;
+        right: 30px;
+        background-color: #dfe4ea;
+        border-radius: 50%;
+        background-size: 8px;
+        min-width: 30px;
+        height: 30px;
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: #d5d9df;
+        }
+      }
+    }
+  }
+}

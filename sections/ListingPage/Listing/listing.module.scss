@@ -1,0 +1,107 @@
+@import "../../../styles/config";
+
+.listing {
+  .headContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    .title {
+      color: $font-color;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .searchCount {
+      color: $sub-font-color;
+      font-size: 14px;
+      font-weight: $f_semibold;
+      line-height: normal;
+    }
+  }
+}
+.tabWrapper {
+  display: block;
+  @include devices(tabletLandscape) {
+    display: none;
+  }
+  :global(.nav) {
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    background: $white;
+    :global(.nav-item) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      position: relative;
+      &:not(:last-child) {
+        &::after {
+          content: url(../../../public/images/gradientLine.svg);
+          position: absolute;
+          right: 0;
+        }
+      }
+      &:first-child {
+        :global(.nav-link) {
+          border-bottom-left-radius: 6px;
+          border-top-left-radius: 8px;
+        }
+      }
+      :global(.nav-link) {
+        padding-block: 23px;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        border-bottom: 3px solid transparent;
+        &:global(.active) {
+          background-color: $white;
+          border-color: $primary;
+        }
+
+        :global(.name) {
+          color: $font-color;
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: $f_semibold;
+          line-height: normal;
+          margin-bottom: 3px;
+        }
+        :global(.price),
+        :global(.time) {
+          color: $sub-font-color;
+          text-align: center;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        :global(.price) {
+          position: relative;
+          &::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            background-color: $sub-font-color;
+            position: absolute;
+          }
+        }
+      }
+      .currentSelect {
+        width: auto;
+        color: $font-color;
+        font-size: 14px;
+        font-weight: $f_semibold;
+        line-height: normal;
+        border: 0;
+        box-shadow: none !important;
+      }
+    }
+  }
+}

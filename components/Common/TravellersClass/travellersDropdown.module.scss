@@ -1,0 +1,93 @@
+@import "../../../styles/config";
+
+.wrapper {
+  width: 100%;
+  max-width: 300px;
+
+  @include devices(tabletLandscape) {
+    max-width: 100%;
+  }
+  .dropdownToggle {
+    width: 100%;
+    text-align: left;
+    border: 0;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 6px 0;
+    color: $font-color;
+    font-size: 16px;
+    font-weight: $f_medium;
+    line-height: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &::after {
+      display: none;
+    }
+    @include devices(tabletLandscape) {
+      border-radius: 5px;
+      border: 1px solid #c4c4c4 !important;
+      padding: 8px 15px !important;
+    }
+  }
+
+  .dropdownMenu {
+    padding: 15px;
+    width: 100%;
+    min-width: 300px;
+  }
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  label {
+    margin: 0;
+    font-weight: $f_medium;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > button {
+      background: #e9ecef;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px !important;
+      font-size: 16px;
+      margin: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    > span {
+      min-width: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.classSelector {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  label {
+    font-weight: $f_medium;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.innerDropdown {
+  .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+  }
+}

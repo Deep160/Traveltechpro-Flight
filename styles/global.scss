@@ -1,0 +1,54 @@
+@import "./font";
+@import "./config";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  background-color: $body-bg-color;
+  color: $font-color;
+  font-family: $font-family;
+}
+
+.container {
+  padding: 0;
+}
+
+@media (width >= 1400px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1350px;
+  }
+}
+
+@media (width >= 1920px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1720px;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.form-check-input:focus {
+  border-color: #000000;
+  box-shadow: none;
+}

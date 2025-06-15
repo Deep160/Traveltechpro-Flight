@@ -1,0 +1,7 @@
+@import '../../../styles/config';
+
+.customSlider{
+    &:global(.rc-slider-with-marks){
+        margin-bottom: 20px;
+    }
+}
