@@ -69,8 +69,8 @@
 .sortbyOffcanvas {
   border-radius: 12px 12px 0 0;
   &:global(.offcanvas) {
-    height: max-content;
-    max-height: 85%;
+    height: max-content !important;
+    max-height: 85% !important;
     border: 0;
 
     :global(.offcanvas-header) {
