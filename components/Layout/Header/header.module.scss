@@ -13,12 +13,15 @@
   }
   :global(.navbar-brand) {
     img {
+      width: 170px;
+      height: 80px;
       @include devices(mobile) {
-        width: 200px;
-        height: auto;
+        width: 150px;
+        height: 60px;
       }
       @include devices(smallMobile) {
-        width: 170px;
+        width: 130px;
+        height: 50px;
       }
     }
   }

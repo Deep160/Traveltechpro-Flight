@@ -32,8 +32,8 @@ export default function Header() {
             <Image
               priority
               src={"/logo.jpg"}
-              width={251}
-              height={54}
+              width={170}
+              height={80}
               alt="site-logo"
             />
           </Link>
@@ -51,8 +51,8 @@ export default function Header() {
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                 <Image
                   src={"/logo.jpg"}
-                  width={151}
-                  height={54}
+                  width={130}
+                  height={55}
                   alt="site-logo"
                 />
               </Offcanvas.Title>
