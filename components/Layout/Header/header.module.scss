@@ -1,7 +1,7 @@
 @import "../../../styles/config";
 
 .header {
-  padding-block: 35px;
+  padding-block: 25px;
   border-bottom: 1px solid $border-color;
   transition: all 0.2s ease-in-out;
   &.shrink {

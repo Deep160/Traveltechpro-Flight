@@ -31,10 +31,10 @@ export default function Header() {
           <Link href="/" className="navbar-brand p-0">
             <Image
               priority
-              src={"/Traveltekpro_Logo.svg"}
+              src={"/logo.jpg"}
               width={251}
               height={54}
-              alt="Traveltekpro_Logo"
+              alt="site-logo"
             />
           </Link>
           <Navbar.Toggle
@@ -50,10 +50,10 @@ export default function Header() {
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
                 <Image
-                  src={"/Traveltekpro_Logo.svg"}
+                  src={"/logo.jpg"}
                   width={151}
                   height={54}
-                  alt="Traveltekpro_Logo"
+                  alt="site-logo"
                 />
               </Offcanvas.Title>
             </Offcanvas.Header>
